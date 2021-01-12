@@ -1,0 +1,45 @@
+body {
+    background-color: pink;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    border-style: solid;
+    padding: 10px 300px;
+    min-width: 500px;
+}
+
+hi {
+    font-weight: 700;
+}
+
+#author{
+    color: palevioletred;
+}
+
+#title{
+    color: grey;
+    background-color: white;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    min-width: 300px;
+    overflow: hidden;
+}
+
+h4 {
+    line-height: 25px;
+}
+
+h2{
+    color: lightcoral
+}
+
+#points{
+    color: grey;
+    background-color: white;
+    border-radius: 3px;
+    padding: 1px;
+    
+    text-align: left;
+}
+}
