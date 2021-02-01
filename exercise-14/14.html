@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="14.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-item">Home</div>
+      <div class="header-item">New</div>
+      <div class="header-item">Accessories</div>
+      <div class="header-item">Bags</div>
+
+      <div class="mobile-header-button">☰</div>
+
+      <div class="mobile-header-menu">
+        <div class="mobile-header-item">Home</div>
+        <div class="mobile-header-item">New</div>
+        <div class="mobile-header-item">Accessories</div>
+        <div class="mobile-header-item">Bags</div>
+      </div>
+    </header>
+    <div class="body-layout">
+      <div class="block block-1"></div>
+      <div class="block block-2"></div>
+      <div class="block block-3"></div>
+    </div>
+
+    <script>
+      const mobileMenuButton = document.querySelector(".mobile-header-button");
+      const mobileHeaderMenu = document.querySelector(".mobile-header-menu");
+
+      mobileMenuButton.addEventListener("click", (e) => {
+        if (mobileHeaderMenu.style.display !== "block") {
+          mobileHeaderMenu.style.display = "block";
+        } else {
+          mobileHeaderMenu.style.display = "none";
+        }
+      });
+
+      window.addEventListener("resize", (e) => {
+        if (window.innerWidth >= 600) {
+          mobileHeaderMenu.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

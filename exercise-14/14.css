@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: pink;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  background-color: white;
+  height: 60px;
+  padding: 0px 3vw;
+}
+
+.header-item {
+  line-height: 60px;
+  padding: 0px 3vw;
+
+  cursor: pointer;
+}
+
+.mobile-header-button {
+  display: none;
+  justify-items: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  margin: 0px 3vw;
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.mobile-header-button:hover {
+  color: magenta;
+}
+
+.mobile-header-menu {
+  display: none;
+
+  position: fixed;
+  top: 60px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  width: 200px;
+}
+
+.mobile-header-item {
+  padding: 0px 6vw;
+  line-height: 60px;
+
+  cursor: pointer;
+}
+
+.mobile-header-item:hover {
+  color: magenta;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-item {
+    display: none;
+  }
+
+  .mobile-header-button {
+    display: flex;
+  }
+}
+
+.header-item:hover {
+  color: magenta;
+}
+
+.body-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 6vw;
+}
+
+.block {
+  height: 25.3vw;
+  width: 25.3vw;
+}
+
+.block-1 {
+  background-color: magenta;
+}
+
+.block-2 {
+  background-color: plum;
+}
+
+.block-3 {
+  background-color: violet;
+}
