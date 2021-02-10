@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(225, 158, 227, 0.7) 36%,
+    rgba(173, 136, 222, 0.7) 60%,
+    rgba(0, 212, 255, 0.7) 100%
+  );
+  color: #222222;
+}
+
+h1 {
+  font-weight: 500;
+  margin: 0;
+}
+
+p {
+  font-weight: 200;
+}
+
+hr {
+  margin-bottom: 3vw;
+}
+
+.header {
+  position: relative;
+  height: 40px;
+  background-color: #222222;
+  color: white;
+  padding: 0 1vw;
+  display: flex;
+}
+
+/* Anything that has this class will disappear when the screen is smaller than 400 */
+@media only screen and (max-width: 400px) {
+  .disappear-mobile {
+    display: none;
+  }
+}
+
+.eyes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+}
+
+.eye {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.pupil {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  height: 0px;
+  width: 0px;
+}
+
+.pupil-left-circle {
+  position: absolute;
+  left: -6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: red;
+}
+
+.pupil-right-circle {
+  position: absolute;
+  right: -6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: red;
+}
+
+.pupil-square {
+  position: absolute;
+  left: -3px;
+  top: 3px;
+  height: 6px;
+  width: 6px;
+  transform: rotate(45deg);
+  background-color: red;
+}
+
+.social-media-links {
+  flex-grow: 1; /* Fill up the space */
+
+  display: flex;
+  justify-content: right;
+}
+
+.clock {
+  text-align: right;
+  padding-top: 10px;
+
+  /* All numbers same width */
+  font-variant-numeric: tabular-nums;
+}
+
+.body-layout {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2vw;
+}
+
+.folder {
+  flex-grow: 1;
+  padding: 2vw;
+  position: relative;
+  margin: 4vw;
+  min-height: 200px;
+}
+
+.icon {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 18vw;
+  width: 18vw;
+  min-width: 150px;
+  min-height: 150px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.folder-title {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  white-space: wrap;
+  font-weight: 700;
+  color: white;
+}
+
+.window {
+  display: none;
+  position: fixed;
+  transform: scale(0);
+  background-color: white;
+  border-radius: 1vw;
+  transition: 0.75s;
+
+  border: 1px solid black;
+  box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.1);
+}
+
+.window-inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 1vw;
+  border-radius: 1vw;
+  border: 1px solid darkgrey;
+
+  overflow-y: scroll;
+}
+
+.window-background {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.background-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/* .gradient-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.gradient-cell {
+  position: absolute;
+  filter: brightness(60%);
+} */
+
+/* Variables, Conditionals, plus Change Operations */
+
+.w1-layout {
+  display: flex;
+  margin-bottom: 3vw;
+}
+
+.w1-img {
+  width: 18%;
+  height: 18%;
+  margin-right: 2%;
+}
+
+/* Alok Vaid Menon */
+
+.img-block-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 8vw;
+}
+
+.img-block-container-2 {
+  position: relative;
+  max-width: 800px;
+  margin-bottom: 8vw;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4vw;
+}
+
+.img-block-container-3 {
+  position: relative;
+  max-width: 800px;
+  margin-bottom: 8vw;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2vw;
+}
+
+.img-block-container img,
+.img-block-container-2 img,
+.img-block-container-3 img {
+  display: block;
+  width: 100%;
+}
